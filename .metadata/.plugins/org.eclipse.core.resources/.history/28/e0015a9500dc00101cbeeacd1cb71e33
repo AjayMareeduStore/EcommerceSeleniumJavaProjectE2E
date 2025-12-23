@@ -1,0 +1,41 @@
+package test;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class TestNgBasics {
+
+	
+	@BeforeMethod
+	public void toss() {
+		
+		
+		System.out.println("Toss will be happen before every match");
+	}
+	
+	@Test
+	public void testCricket() {
+		
+		
+		System.out.println("This is testng");
+	}
+	@Test
+	public void oneDayCricket() {
+		
+		
+		System.out.println("This is testng");
+	}
+	@Test
+	public void t20Cricket() {
+		
+		
+		System.out.println("This is testng");
+	}
+	@Test
+	public void dayAndNightMatch() {
+		
+		
+		System.out.println("This is testng");
+	}
+
+}

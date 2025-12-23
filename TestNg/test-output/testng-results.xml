@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="10" passed="8" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-18T19:48:56 IST" name="SampleSuite" finished-at="2025-12-18T19:48:56 IST" duration-ms="125">
+    <groups>
+      <group name="redBallCricket">
+        <method signature="DomesticMatches.duleeTrphy()[pri:0, instance:test.DomesticMatches@36fc695d]" name="duleeTrphy" class="test.DomesticMatches"/>
+        <method signature="DomesticMatches.ranjiTrophy()[pri:0, instance:test.DomesticMatches@36fc695d]" name="ranjiTrophy" class="test.DomesticMatches"/>
+        <method signature="interNationalCricket.testCricket(java.lang.String,java.lang.String)[pri:0, instance:test.interNationalCricket@5e0e82ae]" name="testCricket" class="test.interNationalCricket"/>
+        <method signature="CorporateLeauges.valuelabsLeauge()[pri:0, instance:FriendlyMatches.CorporateLeauges@3d285d7e]" name="valuelabsLeauge" class="FriendlyMatches.CorporateLeauges"/>
+      </group> <!-- redBallCricket -->
+    </groups>
+    <test started-at="2025-12-18T19:48:56 IST" name="FriendlyMatches" finished-at="2025-12-18T19:48:56 IST" duration-ms="99">
+      <class name="test.interNationalCricket">
+        <test-method is-config="true" signature="Passion()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="Passion" finished-at="2025-12-18T19:48:56 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Passion -->
+        <test-method is-config="true" signature="EnergyAndTime()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="EnergyAndTime" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnergyAndTime -->
+      </class> <!-- test.interNationalCricket -->
+      <class name="FriendlyMatches.CorporateLeauges">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:FriendlyMatches.CorporateLeauges@3d285d7e]" started-at="2025-12-18T19:48:56 IST" name="BeforeClass" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method signature="hyderabadLeague(java.lang.String)[pri:0, instance:FriendlyMatches.CorporateLeauges@3d285d7e]" started-at="2025-12-18T19:48:56 IST" name="hyderabadLeague" finished-at="2025-12-18T19:48:56 IST" duration-ms="26" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Corporateleague.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at FriendlyMatches.CorporateLeauges.hyderabadLeague(CorporateLeauges.java:24)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hyderabadLeague -->
+        <test-method signature="valuelabsLeauge()[pri:0, instance:FriendlyMatches.CorporateLeauges@3d285d7e]" started-at="2025-12-18T19:48:56 IST" name="valuelabsLeauge" finished-at="2025-12-18T19:48:56 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- valuelabsLeauge -->
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:FriendlyMatches.CorporateLeauges@3d285d7e]" started-at="2025-12-18T19:48:56 IST" name="AfterClass" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+      </class> <!-- FriendlyMatches.CorporateLeauges -->
+    </test> <!-- FriendlyMatches -->
+    <test started-at="2025-12-18T19:48:56 IST" name="Test" finished-at="2025-12-18T19:48:56 IST" duration-ms="125">
+      <class name="test.interNationalCricket">
+        <test-method is-config="true" signature="squadSelection()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="squadSelection" finished-at="2025-12-18T19:48:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- squadSelection -->
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="BeforeClass" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method is-config="true" signature="toss()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="toss" finished-at="2025-12-18T19:48:56 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toss -->
+        <test-method signature="dayAndNightMatch()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="dayAndNightMatch" finished-at="2025-12-18T19:48:56 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dayAndNightMatch -->
+        <test-method is-config="true" signature="precentation()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="precentation" finished-at="2025-12-18T19:48:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- precentation -->
+        <test-method signature="testCricket(java.lang.String,java.lang.String)[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="testCricket" finished-at="2025-12-18T19:48:56 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[internationalCricket.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ajay.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCricket -->
+        <test-method is-config="true" signature="toss()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="toss" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toss -->
+        <test-method is-config="true" signature="precentation()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="precentation" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- precentation -->
+        <test-method is-config="true" signature="toss()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="toss" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toss -->
+        <test-method signature="warmUp()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="warmUp" finished-at="2025-12-18T19:48:56 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- warmUp -->
+        <test-method is-config="true" signature="precentation()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="precentation" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- precentation -->
+        <test-method signature="t20Cricket()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="t20Cricket" finished-at="2025-12-18T19:48:56 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t20Cricket -->
+        <test-method is-config="true" signature="toss()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="toss" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toss -->
+        <test-method is-config="true" signature="precentation()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="precentation" finished-at="2025-12-18T19:48:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- precentation -->
+        <test-method signature="oneDayCricket()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="oneDayCricket" finished-at="2025-12-18T19:48:56 IST" depends-on-methods="test.interNationalCricket.dayAndNightMatch" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneDayCricket -->
+        <test-method is-config="true" signature="toss()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="toss" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toss -->
+        <test-method is-config="true" signature="precentation()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="precentation" finished-at="2025-12-18T19:48:56 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- precentation -->
+        <test-method is-config="true" signature="squadReselection()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="squadReselection" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- squadReselection -->
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:test.interNationalCricket@5e0e82ae]" started-at="2025-12-18T19:48:56 IST" name="AfterClass" finished-at="2025-12-18T19:48:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+      </class> <!-- test.interNationalCricket -->
+      <class name="test.DomesticMatches">
+        <test-method signature="duleeTrphy()[pri:0, instance:test.DomesticMatches@36fc695d]" started-at="2025-12-18T19:48:56 IST" name="duleeTrphy" finished-at="2025-12-18T19:48:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- duleeTrphy -->
+        <test-method signature="ranjiTrophy()[pri:0, instance:test.DomesticMatches@36fc695d]" started-at="2025-12-18T19:48:56 IST" name="ranjiTrophy" finished-at="2025-12-18T19:48:56 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ranjiTrophy -->
+      </class> <!-- test.DomesticMatches -->
+    </test> <!-- Test -->
+  </suite> <!-- SampleSuite -->
+</testng-results>

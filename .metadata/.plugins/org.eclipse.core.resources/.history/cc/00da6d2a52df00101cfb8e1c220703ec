@@ -1,0 +1,53 @@
+package StepDefinations;
+
+import java.io.IOException;
+
+import TestReusableComponents.BaseTest;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class CucumberStepDefinations extends BaseTest {
+
+    public LandingPageComponents LandingPageComponents;
+    
+	@Given("Setup and launch the browser")
+	public void Setup_and_launch_the_browser() throws IOException {
+		// launch code
+		LandingPageComponents = hitUrl(); 
+	}
+	
+//
+//	@Given("Login with valid {string} and {string}")
+//	public void login_with_valid_userName_and_password(String userName, String password) {
+//		PageCatalougeComponents = LandingPageComponents.loginTo(userName, password);
+//	}
+//
+//	@When("Get the {string} and Click on addToCart")
+//	public void get_the_product_and_click_on_addToCart(String product) {
+//		PageCatalougeComponents.AddtoCart(product);
+//		PageCatalougeComponents.popUpsToDiappear();
+//		CartPageComponents = PageCatalougeComponents.globalHeaderCartLink();
+//	}
+//
+//	@And("Verify the {string} in cartPage and Navigate to billing page and Place the order")
+//	public void verify_the_product_and_place_order(String product) {
+//		billingPageComponents billingPageComponents = CartPageComponents
+//				.cartProductsListVerifacationByNameAndProceedToBillingPage(product);
+//
+//		billingPageComponents.enterCountryName("ind");
+//		billingPageComponents.waitForResultsAndClickOncountryName();
+//		SummaryPageComponents = billingPageComponents.placeOrder();
+//	}
+//
+//	@Then("Verify {string} message and {string} after placing the order")
+//	public void verify_message_and_product_after_placing_the_order(String expectedMessage, String product) {
+//
+//		Assert.assertTrue(SummaryPageComponents.verifyPoductOrdered().equalsIgnoreCase(product));
+//
+//		String successMessage = SummaryPageComponents.verifySuccessMessage();
+//		Assert.assertEquals(successMessage, expectedMessage);
+//	}
+
+}

@@ -1,0 +1,20 @@
+package Cucumber.TestComponents;
+
+import AjayMareeduSelenium.PageoObjecComponents.PageCatalougeComponents;
+import TestReusableComponents.BaseTest;
+import io.cucumber.java.en.Given;
+
+public class CucumberStepDefinations extends BaseTest {
+
+	
+	public AjayMareeduSelenium.PageoObjecComponents.LandingPageComponents PageCatalougeComponents;
+	@Given ("Setup and launch the browser")
+	public void Setup_and_launch_the_browser() {
+		
+		//launch code
+		PageCatalougeComponents = hitUrl();
+	}
+	
+	
+	
+}

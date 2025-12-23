@@ -1,0 +1,19 @@
+package AjayMareeduSelenium.PageoObjecComponents;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import AjayMareedu.AbstractComponents.ReusableMethods;
+
+public class CartPageComponents extends ReusableMethods {
+	
+	WebDriver driver;
+	
+	public CartPageComponents(WebDriver driver) {
+		
+		super(driver);
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+
+}

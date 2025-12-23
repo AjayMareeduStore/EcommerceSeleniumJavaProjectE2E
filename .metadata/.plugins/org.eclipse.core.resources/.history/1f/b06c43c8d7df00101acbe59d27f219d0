@@ -1,0 +1,8 @@
+package Cucumber;
+
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(features="src/test/java/Resources",glue="")
+public class cucumberTestRunner extends AbstractCucumberTestNG{
+
+}

@@ -1,0 +1,31 @@
+package AjayMareeduSelenium;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import AjayMareeduSelenium.PageoObjecComponents.CartPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.LandingPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.PageCatalougeComponents;
+import AjayMareeduSelenium.PageoObjecComponents.SummaryPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.billingPageComponents;
+import TestReusableComponents.BaseTest;
+
+public class ErrorScenariosValidation extends BaseTest {
+
+	@Test(groups= {"ErrorHandling"}, retryAnalyzer=RetryFlakyTest.class)
+	public void loginErrorValidation() throws IOException {
+
+		LandingPageComponents.loginTo("ajayseleniu@gmail.com",
+				"Ajay@123");
+		String errMsg = LandingPageComponents.VerifyLoginError();
+		System.out.println(errMsg);
+		Assert.assertTrue(errMsg.equalsIgnoreCase("Incorrect email  password."));;
+		
+  
+
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package AjayMareeduSelenium.PageoObjecComponents;
+
+import org.openqa.selenium.WebDriver;
+
+public class CartPageComponents {
+	
+	WebDriver driver;
+	
+	public CartPageComponents(WebDriver driver) {
+		
+		
+		this.driver=driver;
+	}
+
+}

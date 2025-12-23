@@ -1,0 +1,46 @@
+package RealTimeExample;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.testng.annotations.Test;
+
+public class JavaStreams {
+	
+	//Filter an array and get which has first letter as A and count those names
+	//Change the name all into Uppercase
+	//get only first value
+	//merge two arrays
+	//try to print all the names in sorted way
+	//print unique numbers avoiding duplicates
+	//get only first value after the sorting and removing duplicates
+	//get only 3 value after sorting
+	
+	
+
+	
+	public void javaStreams1() {
+		
+		ArrayList<String> names = new ArrayList<String>();
+		
+		names.add("Ajay");
+		names.add("Mareedu");
+		names.add("Arun");
+		names.add("Harshi");
+		names.add("Durga");
+		names.add("Lakshmi");
+		
+		//Filter an array and get which has first letter as A and count those names
+		
+		//Need to convert the list into stream
+		//Give a intermidiate method using lamda expression
+		long value = names.stream().filter(s->s.startsWith("A")).count();
+		
+	
+		
+	}
+	
+
+
+
+}

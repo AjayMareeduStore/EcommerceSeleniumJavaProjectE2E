@@ -1,0 +1,25 @@
+package TestDataCreation;
+
+import java.nio.charset.StandardCharsets;
+
+import org.apache.commons.io.FileUtils;
+
+public class DataReader {
+	
+	public void readData()  {
+	
+		//Covert the data from json to string
+		
+		FileUtils.readFileToString(new file(System.getProperties("user.dir")+"\\src\\test\\java\\TestDataCreation\\testData.json"),StandardCharsets.UTF_8);
+		//Conver the string to hashmap usign jackson databinder
+		
+		
+		
+		
+		
+
+
+		
+	}
+
+}

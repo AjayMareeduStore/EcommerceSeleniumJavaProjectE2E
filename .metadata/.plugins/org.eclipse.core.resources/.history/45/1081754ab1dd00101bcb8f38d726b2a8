@@ -1,0 +1,28 @@
+package AjayMareeduSelenium;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import AjayMareeduSelenium.PageoObjecComponents.CartPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.LandingPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.PageCatalougeComponents;
+import AjayMareeduSelenium.PageoObjecComponents.SummaryPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.billingPageComponents;
+import TestReusableComponents.BaseTest;
+
+public class ErrorScenariosValidation extends BaseTest {
+
+	@Test
+	public void placeAnOrder() throws IOException {
+
+		String RequiredProductName = "ZARA COAT 3";
+		PageCatalougeComponents PageCatalougeComponents = LandingPageComponents.loginTo("ajayseleniu@gmail.com",
+				"Ajay@123");
+
+
+
+	}
+
+}

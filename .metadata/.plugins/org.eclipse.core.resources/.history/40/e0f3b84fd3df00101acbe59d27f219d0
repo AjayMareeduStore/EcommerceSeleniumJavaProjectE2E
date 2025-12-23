@@ -1,0 +1,16 @@
+@tag
+Feature: Place an order in ecommerce websites
+
+  Background:
+  Given Launch the browser and application site
+ 
+  @tag2
+  Scenario Outline: Place an order with requested product name
+    Given 
+    When 
+    Then I verify the <status> in step
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |

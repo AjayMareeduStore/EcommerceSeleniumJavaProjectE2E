@@ -1,0 +1,24 @@
+package Cucumber;
+
+import TestReusableComponents.BaseTest;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import AjayMareeduSelenium.PageoObjecComponents.LandingPageComponents;
+
+public class cucumberRunner extends BaseTest {
+
+	public LandingPageComponents LandingPageComponents;
+
+	@Given("Launch the browser and application site")
+	public void Launch_the_browser_and_application_site() {
+
+		LandingPageComponents = hitUrl();
+
+	}
+
+	@Given("^User login with (.+) and (.+)$")
+	public void User_login_with_username_and_password() {
+
+	}
+
+}

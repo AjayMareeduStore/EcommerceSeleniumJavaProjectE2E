@@ -1,0 +1,27 @@
+package ITestListeners;
+
+import org.testng.ITestListener;
+import org.testng.ITestNGListener;
+import org.testng.ITestResult;
+import org.testng.internal.annotations.IListeners;
+
+public class Listeners implements ITestListener {
+
+	public void onTestStart(ITestResult result) {
+		// not implemented
+
+	}
+
+	public void onTestSuccess(ITestResult result) {
+		// not implemented
+	}
+
+	public void onTestFailure(ITestResult result) {
+		// not implemented
+	}
+
+	public void onTestSkipped(ITestResult result) {
+		// not implemented
+	}
+
+}

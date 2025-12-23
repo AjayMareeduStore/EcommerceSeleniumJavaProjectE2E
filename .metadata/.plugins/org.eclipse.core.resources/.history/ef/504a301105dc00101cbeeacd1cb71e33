@@ -1,0 +1,21 @@
+package FriendlyMatches;
+
+import org.testng.annotations.Test;
+
+public class CorporateLeauges {
+
+	@Test
+	public void valuelabsLeauge() {
+		
+		
+		System.out.println("This is valuelabsLeauge");
+	}
+	@Test
+	public void hyderabadLeague() {
+		
+		
+		System.out.println("This is hyderabadLeague");
+	}
+	
+	
+}

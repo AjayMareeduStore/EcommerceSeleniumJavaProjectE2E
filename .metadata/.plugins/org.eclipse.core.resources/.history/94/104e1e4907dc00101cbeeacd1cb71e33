@@ -1,0 +1,24 @@
+package test;
+
+import org.testng.annotations.Test;
+
+public class DomesticMatches {
+
+
+
+		@Test
+		public void ranjiTrophy() {
+			
+			
+			System.out.println("This is ranjiTrophy");
+		}
+		@Test
+		public void duleeTrphy() {
+			
+			
+			System.out.println("This is duleeTrphy");
+		}
+
+	
+
+}

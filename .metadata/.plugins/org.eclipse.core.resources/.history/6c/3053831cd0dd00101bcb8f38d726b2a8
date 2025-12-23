@@ -1,0 +1,14 @@
+package TestDataCreation;
+
+public class DataReader {
+	
+	public void readData()  {
+	
+		
+		
+
+
+		
+	}
+
+}

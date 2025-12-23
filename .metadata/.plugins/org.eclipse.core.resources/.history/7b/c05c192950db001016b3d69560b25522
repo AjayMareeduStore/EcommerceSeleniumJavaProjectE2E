@@ -1,0 +1,12 @@
+package test;
+
+import org.testng.annotations.Test;
+public class TestNgBasics {
+
+	@Test
+	public void Demo1() {
+		
+		
+		System.out.println("This is testng");
+	}
+}

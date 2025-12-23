@@ -1,0 +1,17 @@
+package AjayMareeduSelenium.PageoObjecComponents;
+
+import org.openqa.selenium.WebDriver;
+
+import AjayMareedu.AbstractComponents.ReusableMethods;
+
+public class billingPageComponents extends ReusableMethods{
+
+	
+	WebDriver driver();
+	public billingPageComponents(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+	
+}

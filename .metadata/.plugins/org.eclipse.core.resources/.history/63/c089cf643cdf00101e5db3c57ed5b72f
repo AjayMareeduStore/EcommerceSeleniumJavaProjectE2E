@@ -1,0 +1,19 @@
+package Cucumber.TestComponents;
+
+import TestReusableComponents.BaseTest;
+import io.cucumber.java.en.Given;
+
+public class CucumberStepDefinations extends BaseTest {
+
+	
+	public LandingPageComponents LandingPageComponents;
+	@Given ("Setup and launch the browser")
+	public void Setup_and_launch_the_browser() {
+		
+		//launch code
+		LandingPageComponents = hitUrl();
+	}
+	
+	
+	
+}

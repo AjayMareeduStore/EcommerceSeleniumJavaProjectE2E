@@ -1,0 +1,113 @@
+package test;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class interNationalCricket {
+
+	
+	@BeforeMethod
+	public void toss() {
+		
+		
+		System.out.println("Toss will be happen before every match");
+	}
+	
+	@AfterMethod
+	public void precentation() {
+		
+		
+		System.out.println("Precentation will be happen afer every match");
+	}
+	
+	@BeforeTest
+	public void squadSelection() {
+		
+		
+		System.out.println("squadSelection will be happen before international Matches");
+	}
+	
+	@AfterTest
+	public void squadReselection() {
+		
+		
+		System.out.println("squadReselection will be happen after international Matches");
+	}
+	
+	@BeforeSuite
+	public void Passion() {
+		
+		
+		System.out.println("Cricket need to passion to play");
+	}
+	
+	@AfterSuite
+	public void EnergyAndTime() {
+		
+		
+		System.out.println("Cricket need EnergyAndTime");
+	}
+	@BeforeClass
+	public void BeforeClass() {
+		
+		System.out.println("I BeforeClass");
+	}
+	
+	
+	@AfterClass
+	public void AfterClass() {
+		
+		System.out.println("I AfterClass");
+	}
+	
+	@Test(enabled=false) // this will skip this case as it anoted with false
+	public void drinks() {
+		
+		
+		System.out.println("This is in breaktime");
+	}
+	
+	@Test(timeOut=4000) // this will wait for 4 seconds before execution of this method
+	public void warmUp() {
+		
+		
+		System.out.println("Need warmUp Before match");
+	}
+	
+	
+	@Parameters({"URL","UserName"})  // By using this we can get the url from testng XML file
+	@Test(groups="redBallCricket") //  By using this we can runs as groups label to differentiate with this label
+	public void testCricket(String URL,String UserName) {
+		
+		System.out.println(URL);
+		System.out.println(UserName);
+		System.out.println("This is testCricket");
+	}
+	@Test(dependsOnMethods= {"dayAndNightMatch"}) // by using this we can execute this method only after dependended method executed
+	public void oneDayCricket() {
+		
+		
+		System.out.println("This is oneDayCricket");
+	}
+	@Test
+	public void t20Cricket() {
+		
+		
+		System.out.println("This is t20Cricket");
+	}
+	@Test
+	public void dayAndNightMatch() {
+		
+		
+		System.out.println("This is dayAndNightMatch");
+	}
+
+}

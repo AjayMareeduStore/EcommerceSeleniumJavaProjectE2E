@@ -1,0 +1,28 @@
+package Cucumber.TestComponents;
+
+import java.io.IOException;
+
+import AjayMareeduSelenium.PageoObjecComponents.LandingPageComponents;
+import TestReusableComponents.BaseTest;
+import io.cucumber.java.en.Given;
+
+public class CucumberStepDefinations extends BaseTest {
+
+	
+	public LandingPageComponents LandingPageComponents;
+	@Given ("Setup and launch the browser")
+	public void Setup_and_launch_the_browser() throws IOException {
+		
+		//launch code
+		LandingPageComponents = hitUrl();
+	}
+	
+	
+	@Given ("Login with valid  and <")
+	public void Login_with_valid_<userName>_and_<password>(){
+		
+		
+	}
+	
+	
+}

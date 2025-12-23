@@ -1,0 +1,37 @@
+package Cucumber.TestComponents;
+
+import java.io.IOException;
+
+import AjayMareeduSelenium.PageoObjecComponents.LandingPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.PageCatalougeComponents;
+import TestReusableComponents.BaseTest;
+import io.cucumber.java.en.Given;
+
+public class CucumberStepDefinations extends BaseTest {
+
+	
+	public LandingPageComponents LandingPageComponents;
+	public PageCatalougeComponents PageCatalougeComponents;
+	@Given ("Setup and launch the browser")
+	public void Setup_and_launch_the_browser() throws IOException {
+		
+		//launch code
+		LandingPageComponents = hitUrl();
+	}
+	
+	
+	@Given ("^Login with username(.+) valid password(.+) and$")
+	public void Login_with_valid_userName_and_password(String userName, String password){
+		
+		 PageCatalougeComponents = LandingPageComponents
+				.loginTo(userName,password);
+	}
+	
+	@When ("^Get the (.+) and Click on addToCart$")
+	public void Get_the_product_and_Click_on_addToCart(String product) {
+		
+		
+	}
+	
+	
+}

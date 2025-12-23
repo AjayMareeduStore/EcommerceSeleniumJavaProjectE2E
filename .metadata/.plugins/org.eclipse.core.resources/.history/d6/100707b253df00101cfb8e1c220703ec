@@ -1,0 +1,8 @@
+package StepDefinations;
+
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(features="src/test/java/Cucumber")
+public class TestRunnner {
+
+}

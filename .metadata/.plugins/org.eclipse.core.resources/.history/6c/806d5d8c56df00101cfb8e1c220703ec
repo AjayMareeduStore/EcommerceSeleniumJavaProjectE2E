@@ -1,0 +1,57 @@
+package StepDefinations;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+
+import AjayMareeduSelenium.PageoObjecComponents.PageCatalougeComponents;
+import AjayMareeduSelenium.PageoObjecComponents.CartPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.billingPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.SummaryPageComponents;
+import TestReusableComponents.BaseTest;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class CucumberStepDefinations extends BaseTest {
+
+	public PageCatalougeComponents PageCatalougeComponents;
+	public CartPageComponents CartPageComponents;
+	public billingPageComponents billingPageComponents;
+	public SummaryPageComponents SummaryPageComponents;
+	@Given("Setup and launch the browser")
+	public void Setup_and_launch_the_browser() throws IOException {
+		// launch code
+		LandingPageComponents = hitUrl();
+	}
+
+
+@Given("Login with valid ajayselenium@gmail.com and Ajay")
+public void login_with_valid_ajayselenium_gmail_com_and_ajay() {
+	 PageCatalougeComponents = LandingPageComponents.loginTo("ajayselenium@gmail.com", "Ajay");
+}
+@When("Get the ZARACOAT and Click on addToCart")
+public void get_the_zaracoat_and_click_on_add_to_cart() {
+	PageCatalougeComponents.AddtoCart("ZARACOAT");
+	PageCatalougeComponents.popUpsToDiappear();
+  CartPageComponents = PageCatalougeComponents.globalHeaderCartLink();
+}
+@When("Verify the ZARACOAT in cartPage and Navigate to billing page and Place the order")
+public void verify_the_zaracoat_in_cart_page_and_navigate_to_billing_page_and_place_the_order() {
+	billingPageComponents billingPageComponents = CartPageComponents
+			.cartProductsListVerifacationByNameAndProceedToBillingPage("ZARACOAT");
+
+	billingPageComponents.enterCountryName("ind");
+	billingPageComponents.waitForResultsAndClickOncountryName();
+	
+}
+@Then("Verify {string} message and ZARACOAT after placing the order")
+public void verify_message_and_zaracoat_after_placing_the_order(String string) {
+	SummaryPageComponents = billingPageComponents.placeOrder();
+	Assert.assertTrue(SummaryPageComponents.verifyPoductOrdered().equalsIgnoreCase(string));
+
+	String successMessage = SummaryPageComponents.verifySuccessMessage();
+	Assert.assertEquals(successMessage, string);
+}
+}

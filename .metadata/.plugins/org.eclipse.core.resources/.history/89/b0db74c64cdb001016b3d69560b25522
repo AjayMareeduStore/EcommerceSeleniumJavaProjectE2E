@@ -1,0 +1,12 @@
+package TestNgPractice;
+
+public class TestNgBasics {
+	
+	public void demo(){
+		
+		System.out.println("This is a testng Demo Class");
+		
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package Cucumber.TestComponents;
+
+public class CucumberStepDefinations {
+
+	@Given "Setup and launch the browser"
+	public void Setup_and_launch_the_browser() {
+		
+		
+	}
+	
+	
+	
+}

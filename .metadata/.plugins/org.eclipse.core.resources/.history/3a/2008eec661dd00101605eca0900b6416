@@ -1,0 +1,21 @@
+package AjayMareeduSelenium.PageoObjecComponents;
+
+import org.openqa.selenium.WebDriver;
+
+public class LandingPageComponents {
+
+	
+	WebDriver driver;
+	
+	
+	
+	
+	public void goTo() {
+		
+		driver.get("https://rahulshettyacademy.com/client");
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,19 @@
+package RealTimeExample;
+
+public class Selenium4Features {
+
+	public static void main(String[] args) {
+
+
+		//Above
+		//Below
+		//RightSide
+		//LeftSide
+		
+		//SwitchToNewTab and get Data Parrallelly
+		//GetScreenshotOFaWebElement
+		
+
+	}
+
+}

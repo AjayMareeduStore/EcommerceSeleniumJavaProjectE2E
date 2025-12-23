@@ -1,0 +1,34 @@
+package Cucumber;
+
+import TestReusableComponents.BaseTest;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+
+public class cucumberRunner extends BaseTest {
+	
+	 public AjayMareeduSelenium.PageoObjecComponents.LandingPageComponents LandingPageComponents ;
+	@Given("Launch the browser and application site")
+	public void Launch_the_browser_and_application_site(){
+		
+		LandingPageComponents = hitUrl();		
+		
+	}
+	@Given ("^User login with (.+) and (.+)$")
+	public void User_login_with_username_and_password() {
+		
+		
+		
+	}
+	
+	
+	
+    @When Search of required <product>
+    @And Move to cart page by clicking on Cart link
+    @And Verify for the <product> added in cart
+    @And place and order by selecting the <countryname> in the billing page
+    @Then Verify the product order placed
+    @And verify the <successmessage> after placing the order
+	
+	
+
+}

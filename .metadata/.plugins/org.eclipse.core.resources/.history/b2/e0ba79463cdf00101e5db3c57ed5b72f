@@ -1,0 +1,15 @@
+package Cucumber.TestComponents;
+
+import io.cucumber.java.en.Given;
+
+public class CucumberStepDefinations {
+
+	@Given ("Setup and launch the browser")
+	public void Setup_and_launch_the_browser() {
+		
+		
+	}
+	
+	
+	
+}

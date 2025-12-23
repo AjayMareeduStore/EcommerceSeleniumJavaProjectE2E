@@ -1,0 +1,11 @@
+package Cucumber.TestComponents;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(features="src/tes/java/Cucumber",glue="Cucumber.TestComponents",
+monochrome=true,plugin= {"html:target/cucumber.html"})
+public class Cucumber_TestRunner extends AbstractTestNGCucumberTests {
+
+
+}

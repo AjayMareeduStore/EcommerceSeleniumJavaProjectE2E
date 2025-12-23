@@ -1,0 +1,14 @@
+package cucumberTestComponents;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(
+	    features = "src/test/java/Cucumber",
+	    glue = "cucumberTestComponents",
+	    monochrome = true,
+	    dryRun = true )
+public class Cucumber_TestRunner2 extends AbstractTestNGCucumberTests {
+
+
+}

@@ -1,0 +1,41 @@
+package AjayMareeduSelenium;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import AjayMareeduSelenium.PageoObjecComponents.CartPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.LandingPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.PageCatalougeComponents;
+import AjayMareeduSelenium.PageoObjecComponents.SummaryPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.billingPageComponents;
+import TestReusableComponents.BaseTest;
+
+public class ErrorScenariosValidation extends BaseTest {
+
+	@Test
+	public void placeAnOrder() throws IOException {
+
+		String RequiredProductName = "ZARA COAT 3";
+		PageCatalougeComponents PageCatalougeComponents = LandingPageComponents.loginTo("ajayselenium@gmail.com",
+				"Ajay@123");
+
+		PageCatalougeComponents.AddtoCart(RequiredProductName);
+		PageCatalougeComponents.popUpsToDiappear();
+		CartPageComponents CartPageComponents = PageCatalougeComponents.globalHeaderCartLink();
+
+		billingPageComponents billingPageComponents = CartPageComponents
+				.cartProductsListVerifacationByNameAndProceedToBillingPage(RequiredProductName);
+		billingPageComponents.enterCountryName("ind");
+		billingPageComponents.waitForResultsAndClickOncountryName();
+		SummaryPageComponents SummaryPageComponents = billingPageComponents.placeOrder();
+
+		SummaryPageComponents.verifyPoductOrdered().equalsIgnoreCase(RequiredProductName);
+		String SuccessMessage = SummaryPageComponents.verifySuccessMessage();
+		Assert.assertTrue(SuccessMessage.equalsIgnoreCase("Thankyou for the order."));
+		System.out.println(SuccessMessage);
+
+	}
+
+}

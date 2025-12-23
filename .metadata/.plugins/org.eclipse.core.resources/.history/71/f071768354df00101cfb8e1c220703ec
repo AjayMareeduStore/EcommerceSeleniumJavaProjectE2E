@@ -1,0 +1,20 @@
+@tag
+Feature: Place an order for an ecommerce Website
+  I want to use this template for my feature file
+  
+  Background:
+  Given Setup and launch the browser
+  
+  @tag2
+  Scenario Outline: Placing an order with valid detils 
+  
+    Given Login with valid <userName> and <password>
+    When Get the <product> and Click on addToCart
+    And Verify the <product> in cartPage and Navigate to billing page and Place the order
+    Then Verify "Thankyou for the order." message and <product> after placing the order
+
+    Examples: 
+    
+      | userName               | password     | product     |
+      | ajayselenium@gmail.com | Ajay    | ZARA COAT|
+     

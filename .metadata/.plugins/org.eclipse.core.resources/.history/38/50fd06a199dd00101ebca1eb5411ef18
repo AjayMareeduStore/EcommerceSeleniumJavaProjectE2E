@@ -1,0 +1,64 @@
+package TestReusableComponents;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import AjayMareeduSelenium.PageoObjecComponents.LandingPageComponents;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BaseTest {
+
+	public WebDriver browserInvoke() throws IOException {
+
+		Properties prop = new Properties();
+		FileInputStream file = new FileInputStream(
+				"C:\\Users\\admin\\eclipse-workspace\\SeleniumFrameworkE2E\\src\\main\\"
+				+ "java\\Properties\\global.properties");
+		prop.load(file);
+		String browserName = prop.getProperty("browser");
+
+		if (browserName.equalsIgnoreCase("Chrome")) {
+
+			WebDriverManager.chromedriver().setup(); // New webdriver manager help to invoke browser
+			WebDriver driver = new ChromeDriver();
+
+		} else if (browserName.equals("edge")) {
+
+		}
+		
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+		
+		return browserInvoke();
+
+	}
+
+	 
+	
+	@BeforeMethod
+	public LandingPageComponents hitUrl() throws IOException {
+		
+		driver = browserInvoke();
+		LandingPageComponents LandingPageComponents = new LandingPageComponents(driver);
+		LandingPageComponents.goTo();
+		return LandingPageComponents;
+		
+	}
+	
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		
+      driver.close();
+
+	}
+
+}

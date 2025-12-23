@@ -1,0 +1,44 @@
+package AjayMareeduSelenium.PageoObjecComponents;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import AjayMareedu.AbstractComponents.ReusableMethods;
+
+public class SummaryPageComponents extends ReusableMethods{
+	
+	WebDriver driver;
+	
+	public SummaryPageComponents(WebDriver driver) {
+		
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	
+	@FindBy(xpath="//div[text()='ZARA COAT 3']")
+	WebElement textVerification;
+	
+	@FindBy(xpath="//*[normalize-space(text())='Thankyou for the order.']")
+	WebElement Output;
+	
+	
+	public String verifyPoductOrdered() {
+		
+		String PoductOrdered =  textVerification.getText();
+		return PoductOrdered;
+	
+	}
+	
+public String verifySuccessMessage() {
+		
+		String grabbedText =  Output.getText();
+		return grabbedText;
+	
+	}
+	
+}

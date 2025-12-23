@@ -1,0 +1,50 @@
+package AjayMareeduSelenium.PageoObjecComponents;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class LandingPageComponents {
+
+	
+	WebDriver driver;
+	
+	//Constructor is the first method to run in a class
+	//By using constructor we can catch the driver from test class
+	//this. is refers to current class only
+	
+	public LandingPageComponents(WebDriver driver) { //Constructor is the first method to run in a class
+		
+		this.driver = driver;
+		
+	}
+	
+	//WebElement ele = driver.findElement(By.id("userEmail"));; - this is one way of declaring
+	//Page factory element which are smart way to store the webelemets
+
+	driver.findElement(By.id("userPassword")).sendKeys("Ajay@123");
+	driver.findElement(By.id("login")).click();
+	
+	@FindBy(id="userEmail")
+	WebElement userEmail;
+	
+	@FindBy(id="userPassword")
+	WebElement Password;
+	
+	@FindBy(id="login")
+	WebElement SubmitButton;
+	
+	
+	
+	
+	
+	public void goTo() {
+		
+		driver.get("https://rahulshettyacademy.com/client");
+		
+	}
+	
+	
+	
+}

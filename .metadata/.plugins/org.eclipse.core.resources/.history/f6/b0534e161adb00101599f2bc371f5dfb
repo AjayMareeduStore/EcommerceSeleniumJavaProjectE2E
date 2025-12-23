@@ -1,0 +1,31 @@
+package RealTimeExample;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import static org.openqa.selenium.support.locators.RelativeLocator.*; //Static package to import manually or selenium 4
+
+import org.openqa.selenium.By;
+public class Selenium4Features {
+
+	public static void main(String[] args) {
+
+		WebDriver driver = new ChromeDriver();
+		//Above
+		
+		driver.get("https://rahulshettyacademy.com/angularpractice/");
+		WebElement name = driver.findElement(By.xpath("(//label[text()='Name']"));
+		driver.findElement(with(By.tagName("input")).above(name)).getText();
+		
+		
+		//Below
+		//RightSide
+		//LeftSide
+		
+		//SwitchToNewTab and get Data Parrallelly
+		//GetScreenshotOFaWebElement
+		
+
+	}
+
+}

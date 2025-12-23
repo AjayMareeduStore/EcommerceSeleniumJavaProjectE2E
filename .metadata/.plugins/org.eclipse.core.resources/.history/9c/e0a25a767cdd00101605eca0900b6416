@@ -1,0 +1,17 @@
+package AjayMareeduSelenium.PageoObjecComponents;
+
+import org.openqa.selenium.WebDriver;
+
+import AjayMareedu.AbstractComponents.ReusableMethods;
+
+public class SummaryPageComponents extends ReusableMethods{
+	
+	WebDriver driver;
+	
+	public SummaryPageComponents(WebDriver driver) {
+		
+		super(driver);
+		this.driver = driver;
+	}
+
+}

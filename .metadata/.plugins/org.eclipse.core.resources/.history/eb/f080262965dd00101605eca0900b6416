@@ -1,0 +1,36 @@
+package AjayMareeduSelenium.PageoObjecComponents;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import AjayMareedu.AbstractComponents.ReusableMethods;
+
+public class PageCatalougeComponents extends ReusableMethods {
+	
+	WebDriver driver;
+	
+	public PageCatalougeComponents(WebDriver driver) {
+		
+		super(driver);
+		this.driver = driver;
+	}
+	
+	
+	@FindBy(css=".col-lg-4")
+	List<WebElement> productsList;
+	
+	public WebElement getProductsList(String RequiredProductName) {
+		
+		visibilityOfElementLocated();
+		WebElement product = productsList.stream()
+				.filter(prd -> prd.findElement(By.cssSelector("b")).getText().equalsIgnoreCase(RequiredProductName))
+				.findFirst().orElse(null);
+		
+		return product;
+	}
+
+}

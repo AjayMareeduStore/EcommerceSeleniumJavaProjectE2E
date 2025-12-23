@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="TestReusableComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="AjayMareeduSelenium.EcommerceE2EPractics">
+        <methods>
+          <include name="tearDown"/>
+          <include name="placeAnOrder" invocation-numbers="0 1"/>
+          <include name="hitUrl"/>
+          <include name="orderHistoryValidation"/>
+        </methods>
+      </class> <!-- AjayMareeduSelenium.EcommerceE2EPractics -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test thread-count="5" parallel="tests" name="ErrorScenariosValidation(failed)" verbose="0">
+    <classes>
+      <class name="AjayMareeduSelenium.ErrorScenariosValidation">
+        <methods>
+          <include name="tearDown"/>
+          <include name="hitUrl"/>
+          <include name="loginErrorValidation"/>
+        </methods>
+      </class> <!-- AjayMareeduSelenium.ErrorScenariosValidation -->
+    </classes>
+  </test> <!-- ErrorScenariosValidation(failed) -->
+</suite> <!-- Failed suite [Suite] -->

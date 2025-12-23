@@ -1,0 +1,58 @@
+package StepDefinations;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+
+import AjayMareeduSelenium.PageoObjecComponents.PageCatalougeComponents;
+import AjayMareeduSelenium.PageoObjecComponents.CartPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.billingPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.SummaryPageComponents;
+import TestReusableComponents.BaseTest;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class CucumberStepDefinations extends BaseTest {
+
+	public PageCatalougeComponents PageCatalougeComponents;
+	public CartPageComponents CartPageComponents;
+	public billingPageComponents billingPageComponents;
+	public SummaryPageComponents SummaryPageComponents;
+	@Given("Setup and launch the browser")
+	public void Setup_and_launch_the_browser() throws IOException {
+		// launch code
+		LandingPageComponents = hitUrl();
+	}
+
+
+	@Given("Login with valid ajayselenium@gmail.com and Ajay@{int}")
+	public void login_with_valid_ajayselenium_gmail_com_and_ajay(Integer int1) {
+	 PageCatalougeComponents = LandingPageComponents.loginTo("ajayselenium@gmail.com", "Ajay@123");
+}
+	@When("Get the ZARA COAT {int} and Click on addToCart")
+	public void get_the_zara_coat_and_click_on_add_to_cart(Integer int1) {
+	PageCatalougeComponents.AddtoCart("ZARA COAT 3");
+	PageCatalougeComponents.popUpsToDiappear();
+  CartPageComponents = PageCatalougeComponents.globalHeaderCartLink();
+}
+	@When("Verify the ZARA COAT {int} in cartPage and Navigate to billing page and Place the order")
+	public void verify_the_zara_coat_in_cart_page_and_navigate_to_billing_page_and_place_the_order(Integer int1) {
+	billingPageComponents billingPageComponents = CartPageComponents
+			.cartProductsListVerifacationByNameAndProceedToBillingPage("ZARA COAT 3");
+
+	billingPageComponents.enterCountryName("ind");
+	billingPageComponents.waitForResultsAndClickOncountryName();
+	
+}
+	@Then("Verify {string} message and ZARA COAT {int} after placing the order")
+	public void verify_message_and_zara_coat_after_placing_the_order(String string, Integer int1) {
+	SummaryPageComponents SummaryPageComponents = billingPageComponents.placeOrder();
+
+	SummaryPageComponents.verifyPoductOrdered().equalsIgnoreCase("ZARA COAT 3");
+	String SuccessMessage = SummaryPageComponents.verifySuccessMessage();
+	Assert.assertTrue(SuccessMessage.equalsIgnoreCase(string));
+	System.out.println(SuccessMessage);
+}
+}

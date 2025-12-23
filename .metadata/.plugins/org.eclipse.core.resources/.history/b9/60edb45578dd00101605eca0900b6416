@@ -1,0 +1,40 @@
+package AjayMareeduSelenium.PageoObjecComponents;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import AjayMareedu.AbstractComponents.ReusableMethods;
+
+public class billingPageComponents extends ReusableMethods{
+
+	
+	WebDriver driver;
+	
+	public billingPageComponents(WebDriver driver) {
+		
+		super(driver);
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+		
+	}
+	
+	By countryLocator = By.xpath("//input[@placeholder='Select Country']");
+	
+	public void addCountryAndProceed() {
+		
+		visibilityOfElementLocatedAndProceedByClick(countryLocator);
+		
+		
+	}
+	
+	public void countrySelectionAndProceed(String CountryName) {
+		
+		actions(CountryName);
+	}
+	
+	
+	
+
+	
+}

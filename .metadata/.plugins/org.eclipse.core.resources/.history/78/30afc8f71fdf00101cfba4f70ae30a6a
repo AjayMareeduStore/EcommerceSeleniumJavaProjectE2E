@@ -1,0 +1,9 @@
+
+
+Feature: Place an order
+
+  Scenario: Successful order placement
+    Given user is on the landing page
+    When user places an order
+    Then order should be placed successfully
+

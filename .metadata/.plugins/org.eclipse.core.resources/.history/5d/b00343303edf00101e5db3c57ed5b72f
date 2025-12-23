@@ -1,0 +1,55 @@
+package Cucumber.TestComponents;
+
+import java.io.IOException;
+
+import AjayMareeduSelenium.PageoObjecComponents.CartPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.LandingPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.PageCatalougeComponents;
+import AjayMareeduSelenium.PageoObjecComponents.SummaryPageComponents;
+import AjayMareeduSelenium.PageoObjecComponents.billingPageComponents;
+import TestReusableComponents.BaseTest;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+
+public class CucumberStepDefinations extends BaseTest {
+
+	
+	public LandingPageComponents LandingPageComponents;
+	public PageCatalougeComponents PageCatalougeComponents;
+	public CartPageComponents CartPageComponents;
+	@Given ("Setup and launch the browser")
+	public void Setup_and_launch_the_browser() throws IOException {
+		
+		//launch code
+		LandingPageComponents = hitUrl();
+	}
+	
+	
+	@Given ("^Login with username(.+) valid password(.+) and$")
+	public void Login_with_valid_userName_and_password(String userName, String password){
+		
+		 PageCatalougeComponents = LandingPageComponents
+				.loginTo(userName,password);
+	}
+	
+	@When ("^Get the (.+) and Click on addToCart$")
+	public void Get_the_product_and_Click_on_addToCart(String product) {
+		
+		PageCatalougeComponents.AddtoCart(product);
+		PageCatalougeComponents.popUpsToDiappear();
+	    CartPageComponents = PageCatalougeComponents.globalHeaderCartLink();
+	}
+	
+	@And ("^Verify the (.+) in cartPage and Navigate to billing page and Place the order$")
+	public void Verify_the_product_in_cartPage_and_Navigate_to_billing_and_Place_order(String product) {
+		billingPageComponents billingPageComponents = CartPageComponents
+				.cartProductsListVerifacationByNameAndProceedToBillingPage(product);
+		billingPageComponents.enterCountryName("ind");
+		billingPageComponents.waitForResultsAndClickOncountryName();
+		SummaryPageComponents SummaryPageComponents = billingPageComponents.placeOrder();
+		
+	}
+	
+	
+}
